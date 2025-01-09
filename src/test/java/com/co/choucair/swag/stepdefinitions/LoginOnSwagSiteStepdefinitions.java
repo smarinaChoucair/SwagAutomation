@@ -42,40 +42,4 @@ public class LoginOnSwagSiteStepdefinitions {
         );
     }
 
-    //@Buy
-    @When("adds some products to the cart")
-    public void addsSomeProductsToTheCart() {
-        OnStage.theActorCalled(ACTOR).attemptsTo(
-                AddProductToCart.addToCart(SELECTED_PRODUCT_NAME)
-        );
-    }
-
-    @When("checks that exactly chosen product is on the cart")
-    public void checksThatExactlyChosenProductIsOnTheCart() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                ClickToCheckout.toCheckout()
-        );
-    }
-
-    @When("fills the checkout personal information fields")
-    public void fillsTheCheckoutPersonalInformationFields(DataTable table) {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                TypePersonalCheckoutInformation.typeCheckoutInfo(CheckoutLombokData.setCheckoutData(table).get(0))
-        );
-    }
-
-    @When("checks that exactly chosen product is on the checkout overview")
-    public void checksThatExactlyChosenProductIsOnTheCheckoutOverview() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                ClickToFinishBuy.finishBuy()
-        );
-    }
-
-    @Then("^he will see the message (.*) on screen$")
-    public void heWillSeeTheMessageMessageOnScreen(String message) {
-        OnStage.theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(ValidateSuccesfulBuy.validateBuy(CONFIRMATION_TITLE), containsString(message))
-        );
-    }
-
 }

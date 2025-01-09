@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Buy on SwagLabs Website" skipped="0" tests="1" time="0.94" timestamp="2025-01-09 11:03:59"><testcase name="Successful purchase on the website"><error message="Cannot invoke &quot;org.openqa.selenium.WebElement.findElements(org.openqa.selenium.By)&quot; because &quot;element&quot; is null" type="java.lang.NullPointerException">Cannot invoke "org.openqa.selenium.WebElement.findElements(org.openqa.selenium.By)" because "element" is null</error><system-err>Cannot invoke "org.openqa.selenium.WebElement.findElements(org.openqa.selenium.By)" because "element" is null&#13;
+com.co.choucair.swag.utils.CountChilds.childQty(CountChilds.java:15)&#13;
+com.co.choucair.swag.stepdefinitions.Hooks.setTheStage(Hooks.java:24)&#13;
+</system-err></testcase></testsuite>
